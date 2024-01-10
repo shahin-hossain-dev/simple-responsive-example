@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* row বরাবর same size এর row গুলোকে 100px এবং বাকি ২টাতে 50px দেয়া হয়েছে।*/
+            grid-template-rows: repeat(3, 100px) 50px 50px;
+            gap: 10px;
+        }
+
+        .box {
+            background-color: teal;
+        }
+
+        /* grid row বরাবর span বা জায়গা নেওয়ার জন্য grid-row:span; use করা হয়। */
+        #box-1 {
+            grid-row: span 5;
+        }
+
+        /* grid column বরাবর span বা জায়গা নেওয়ার জন্য grid-column:span; use করা হয়। */
+        #box-11,
+        #box-12 {
+            grid-column: span 3;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .container>.box*12#box-$>p{box-$} -->
+    <div class="container">
+        <div class="box" id="box-1">
+            <p>box-1</p>
+        </div>
+        <div class="box" id="box-2">
+            <p>box-2</p>
+        </div>
+        <div class="box" id="box-3">
+            <p>box-3</p>
+        </div>
+        <div class="box" id="box-4">
+            <p>box-4</p>
+        </div>
+        <div class="box" id="box-5">
+            <p>box-5</p>
+        </div>
+        <div class="box" id="box-6">
+            <p>box-6</p>
+        </div>
+        <div class="box" id="box-7">
+            <p>box-7</p>
+        </div>
+        <div class="box" id="box-8">
+            <p>box-8</p>
+        </div>
+        <div class="box" id="box-9">
+            <p>box-9</p>
+        </div>
+        <div class="box" id="box-10">
+            <p>box-10</p>
+        </div>
+        <div class="box" id="box-11">
+            <p>box-11</p>
+        </div>
+        <div class="box" id="box-12">
+            <p>box-12</p>
+        </div>
+    </div>
+</body>
+
+</html>
